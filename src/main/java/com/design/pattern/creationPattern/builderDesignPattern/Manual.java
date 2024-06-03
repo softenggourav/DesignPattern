@@ -1,7 +1,12 @@
 package com.design.pattern.creationPattern.builderDesignPattern;
 
+import com.design.pattern.creationPattern.builderDesignPattern.model.Engine;
+import com.design.pattern.creationPattern.builderDesignPattern.model.GPSNavigator;
+import com.design.pattern.creationPattern.builderDesignPattern.model.Transmission;
+import com.design.pattern.creationPattern.builderDesignPattern.model.TripComputer;
+
 public class Manual {
-    private final CarType carType;
+    private final Builder.CarType carType;
     private final int seats;
     private final Engine engine;
     private final Transmission transmission;
@@ -9,7 +14,7 @@ public class Manual {
     private final GPSNavigator gpsNavigator;
 
 
-    public Manual(CarType carType, int seats, Engine engine, Transmission transmission,
+    public Manual(Builder.CarType carType, int seats, Engine engine, Transmission transmission,
                   TripComputer tripComputer, GPSNavigator gpsNavigator) {
         this.carType = carType;
         this.seats = seats;

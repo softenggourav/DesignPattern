@@ -18,7 +18,7 @@ public class DemoBuilderDesignPattern {
         // Director is not aware and not dependent on concrete builders and
         // products.
         Car car = builder.getResult();
-        System.out.println("Car built:\n" + car.getCarType());
+        System.out.println("Car built:\n" + car.print());
 
 
         CarManualBuilder manualBuilder = new CarManualBuilder();

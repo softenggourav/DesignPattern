@@ -1,5 +1,6 @@
-package com.design.pattern.creationPattern.builderDesignPattern;
+package com.design.pattern.creationPattern.builderDesignPattern.model;
 
+import com.design.pattern.creationPattern.builderDesignPattern.Car;
 import lombok.Getter;
 import lombok.Setter;
 

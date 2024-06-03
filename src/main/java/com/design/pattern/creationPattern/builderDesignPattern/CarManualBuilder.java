@@ -1,5 +1,10 @@
 package com.design.pattern.creationPattern.builderDesignPattern;
 
+import com.design.pattern.creationPattern.builderDesignPattern.model.Engine;
+import com.design.pattern.creationPattern.builderDesignPattern.model.GPSNavigator;
+import com.design.pattern.creationPattern.builderDesignPattern.model.Transmission;
+import com.design.pattern.creationPattern.builderDesignPattern.model.TripComputer;
+
 public class CarManualBuilder implements Builder {
     private CarType carType;
     private int seats;
