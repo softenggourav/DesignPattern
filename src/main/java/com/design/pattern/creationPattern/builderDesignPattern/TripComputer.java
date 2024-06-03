@@ -1,2 +1,22 @@
-package com.design.pattern.creationPattern.builderDesignPattern;public class TripComputer {
+package com.design.pattern.creationPattern.builderDesignPattern;
+
+import lombok.Getter;
+import lombok.Setter;
+
+public class TripComputer {
+    @Getter
+    @Setter
+    private Car car;
+
+    public void showFuelLevel() {
+        System.out.println("Fuel Level:"+ car.getFuel());
+    }
+
+    public void showStatus() {
+        if(this.car.getEngine().isStarted()){
+            System.out.println("Car is started");
+        } else {
+            System.out.println("Car isn't started");
+        }
+    }
 }

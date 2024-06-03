@@ -1,4 +1,7 @@
 package com.design.pattern.creationPattern.builderDesignPattern;
 
-public class CarType {
+public enum CarType {
+    CITY_CAR,
+    SPORTS_CAR,
+    SUV
 }
