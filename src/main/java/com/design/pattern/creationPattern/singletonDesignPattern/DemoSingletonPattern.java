@@ -2,7 +2,7 @@ package com.design.pattern.creationPattern.singletonDesignPattern;
 
 public class DemoSingletonPattern {
     public static void main(String[] args) {
-        demoSingletonPattern();
+//        demoSingletonPattern();
         demoThreadSafeSingletonPattern();
     }
 
@@ -20,8 +20,8 @@ public class DemoSingletonPattern {
         System.out.println("If you see the same value, then singleton was reused (yay!)" + "\n" +
                 "If you see different values, then 2 singletons were created (booo!!)" + "\n\n" +
                 "RESULT:" + "\n");
-        Singleton singleton1 = Singleton.getInstance("Gourav");
-        Singleton singleton2 = Singleton.getInstance("Sourav");
+        ThreadSafeSingleton singleton1 = ThreadSafeSingleton.getInstance("Gourav");
+        ThreadSafeSingleton singleton2 = ThreadSafeSingleton.getInstance("Sourav");
 
         System.out.println(singleton1.value);
         System.out.println(singleton2.value);
@@ -30,7 +30,7 @@ public class DemoSingletonPattern {
     static class ThreadFoo implements Runnable {
         @Override
         public void run() {
-            Singleton singleton = Singleton.getInstance("FOO");
+            ThreadSafeSingleton singleton = ThreadSafeSingleton.getInstance("FOO");
             System.out.println(singleton.value);
         }
     }
@@ -38,7 +38,7 @@ public class DemoSingletonPattern {
     static class ThreadBar implements Runnable {
         @Override
         public void run() {
-            Singleton singleton = Singleton.getInstance("BAR");
+            ThreadSafeSingleton singleton = ThreadSafeSingleton.getInstance("BAR");
             System.out.println(singleton.value);
         }
     }
